@@ -1,15 +1,23 @@
 {
   "name": "config-next",
-  "version": "1.0.0",
-  "description": "",
+  "license": "MIT",
+  "private": true,
+  "version": "0.0.0",
+  "description": "My personal next configuration for my projects",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BasheerRajeh/config-next.git"
+  },
+  "workspaces": [
+    "/packages/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Basheer Rajeh (https://github.com/BasheerRajeh)",
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
