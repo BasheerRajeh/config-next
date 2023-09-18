@@ -1,26 +1,38 @@
 {
-  "name": "config-next",
-  "license": "MIT",
-  "private": true,
-  "version": "0.0.0",
-  "description": "My personal next configuration for my projects",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BasheerRajeh/config-next.git"
-  },
-  "workspaces": [
-    "/packages/*"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "prepare": "husky install"
-  },
-  "keywords": [],
-  "author": "Basheer Rajeh (https://github.com/BasheerRajeh)",
-  "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "husky": "^8.0.0"
-  }
+    "name": "config-next",
+    "version": "0.0.1",
+    "description": "My personal next configuration for my projects",
+    "license": "MIT",
+    "author": "Basheer Rajeh (https://github.com/BasheerRajeh)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BasheerRajeh/config-next.git"
+    },
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier -w .",
+        "prepare": "husky install"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "@changesets/cli": "^2.26.2",
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^17.7.0",
+        "config-prettier": "workspace:*",
+        "husky": "^8.0.0",
+        "lint-staged": "^14.0.1",
+        "prettier": "^3.0.3"
+    },
+    "keywords": [],
+    "publishConfig": {
+        "access": "public"
+    },
+    "lint-staged": {
+        "*.{json,md,js,ts,cjs,mjs}": [
+            "prettier -w"
+        ]
+    },
+    "prettier": "config-prettier"
 }
